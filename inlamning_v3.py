@@ -44,14 +44,20 @@ class DataHandler:
         df = pd.read_csv(for_test.url, index_col="country")
         country_1 = df.loc[selected_country_1]
         country_2 = df.loc[selected_country_2]
-        print(country_1.groupby(['country'])[['daily_vaccinations_per_million']].mean())
+        country_1_data = country_1.groupby(['country'])[['daily_vaccinations_per_million']].mean()
+        country_2_data = country_2.groupby(['country'])[['daily_vaccinations_per_million']].mean()
+        return (country_1_data,country_2_data)
+
+
 
 
 
 for_test = DataHandler('vaccine_per_million')
 
 #for_test.plot_vaccinations('country','daily_vaccinations_per_million')
-for_test._extract_country_data('Norway',"Peru")
+a,b = for_test._extract_country_data('Norway',"Peru")
+print(a)
+print(b)
 
 #parser = argparse.ArgumentParser(description='Sum range')
 #parser.add_argument('--country1', help="enter first country", required=True, type=str)
