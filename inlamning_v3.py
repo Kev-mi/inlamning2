@@ -7,13 +7,10 @@ import matplotlib.pyplot as plt
 class DataHandler:
     def __init__(self, plotting_goal : str) -> None:
         ''' Inititialiser that reads the csv file and puts it into a pandas dataframe
-
         Args:
             plotting_goal(str) just a name to make it work
-
         Returns:
             None
-
     '''
 
         self.plotting_goal = plotting_goal
@@ -21,14 +18,11 @@ class DataHandler:
 
     def plot_vaccinations(self,row,column):
         '''Function that plots groupby on selected row and column
-
         Args:
             row(str): selected row
             column(str): selected column
-
         returns:
             None
-
         '''
 
         df = pd.read_csv(for_test.url)
@@ -44,9 +38,15 @@ class DataHandler:
         df = pd.read_csv(for_test.url, index_col="country")
         country_1 = df.loc[selected_country_1]
         country_2 = df.loc[selected_country_2]
-        country_1_data = country_1.groupby(['country'])[['daily_vaccinations_per_million']].mean()
-        country_2_data = country_2.groupby(['country'])[['daily_vaccinations_per_million']].mean()
-        return (country_1_data,country_2_data)
+        plot_y = (country_1[['daily_vaccinations_per_million']])
+        plot_x = (country_1[['daily_vaccinations_per_million']])
+        print(plot_x)
+
+
+        #country_1_data = country_1.groupby(['country'])[['daily_vaccinations_per_million']].mean()
+        #country_2_data = country_2.groupby(['country'])[['daily_vaccinations_per_million']].mean()
+        #return (country_1_data,country_2_data)
+        return None
 
 
 
@@ -55,9 +55,9 @@ class DataHandler:
 for_test = DataHandler('vaccine_per_million')
 
 #for_test.plot_vaccinations('country','daily_vaccinations_per_million')
-a,b = for_test._extract_country_data('Norway',"Peru")
-print(a)
-print(b)
+#a,b = for_test._extract_country_data('Norway',"Peru")
+for_test._extract_country_data('Norway',"Peru")
+
 
 #parser = argparse.ArgumentParser(description='Sum range')
 #parser.add_argument('--country1', help="enter first country", required=True, type=str)
