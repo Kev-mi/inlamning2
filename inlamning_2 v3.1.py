@@ -9,7 +9,7 @@ class DataHandler:
             plotting_goal(str) just a name to make it work
         Returns:
             None
-    '''
+        '''
 
         self.plotting_goal = plotting_goal
         self.url = 'https://github.com/NordAxon/ec-python-course/blob/master/assignments/01_inlamningsuppgift_2_data.csv?raw=true'
@@ -50,13 +50,18 @@ class DataHandler:
         country_2_Df = (country_2[[selected_stat]])
         return country_1_Df,country_2_Df
 
-for_test = DataHandler('vaccine_per_million')
-country_1_Df,country_2_Df = for_test._extract_country_data('Norway',"Peru",'daily_vaccinations_per_million')
-for_test.plot_vaccinations(country_1_Df,country_2_Df)
 
-#parser = argparse.ArgumentParser(description='Sum range')
-#parser.add_argument('--country1', help="enter first country", required=True, type=str)
-#parser.add_argument('--country2', help="enter second country", required=True, type=str)
-#parser.add_argument('--data-flag', help="enter what you want the program to do", required=True, type=str)
-#args = parser.parse_args()
-#args.country1, args.country2
+def main():
+    for_test = DataHandler('vaccine_per_million')
+    country_1_Df, country_2_Df = for_test._extract_country_data('Norway', "Peru", 'daily_vaccinations_per_million')
+    for_test.plot_vaccinations(country_1_Df, country_2_Df)
+
+if __name__ == "__main__":
+    # parser = argparse.ArgumentParser(description='Sum range')
+    # parser.add_argument('--country1', help="enter first country", required=True, type=str)
+    # parser.add_argument('--country2', help="enter second country", required=True, type=str)
+    # parser.add_argument('--data-flag', help="enter what you want the program to do", required=True, type=str)
+    # args = parser.parse_args()
+    # args.country1, args.country2
+    main()
+
