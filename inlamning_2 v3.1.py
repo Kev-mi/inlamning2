@@ -14,7 +14,7 @@ class DataHandler:
         self.plotting_goal = plotting_goal
         self.url = 'https://github.com/NordAxon/ec-python-course/blob/master/assignments/01_inlamningsuppgift_2_data.csv?raw=true'
 
-    def plot_vaccinations(self,country_1,country_2):
+    def plot_vaccinations(self,country_1 : "Pandas DataFrame" ,country_2 : "Pandas DataFrame") -> None:
         '''Function that plots using the df arguments
         Args:
             country_1(Pandas DataFrame): selected country
@@ -60,4 +60,3 @@ for_test.plot_vaccinations(country_1_Df,country_2_Df)
 #parser.add_argument('--data-flag', help="enter what you want the program to do", required=True, type=str)
 #args = parser.parse_args()
 #args.country1, args.country2
-
