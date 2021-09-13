@@ -53,11 +53,10 @@ def main():
     for_test.plot_vaccinations(country_1_Df, country_2_Df)
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser(description='Sum range')
+    # parser = argparse.ArgumentParser(description='select from 2 countries and then select from this list of options: daily_vaccinations_per_million , source_website , daily_vaccinations')
     # parser.add_argument('--country1', help="enter first country", required=True, type=str)
     # parser.add_argument('--country2', help="enter second country", required=True, type=str)
     # parser.add_argument('--data-flag', help="enter what you want the program to do", required=True, type=str)
-    # print("list of options: total_vaccinations,people_vaccinated,people_fully_vaccinated,daily_vaccinations_raw,daily_vaccinations,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,daily_vaccinations_per_million,vaccines,source_name,source_website")
     # args = parser.parse_args()
     # args.country1, args.country2
     main()
