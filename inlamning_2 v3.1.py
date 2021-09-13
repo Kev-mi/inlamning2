@@ -23,11 +23,12 @@ class DataHandler:
             None
         '''
 
-        country_1.plot.hist(color='g', label='daily_vaccinations_per_million')
-        plt.xlabel('number of ' + selected_stat " in " + selected_country)
-        plt.show()
-        country_2.plot.hist(color='b', label='daily_vaccinations_per_million')
-        plt.xlabel('number of ' + selected_stat " in " + selected_country)
+        #country_1.plot.hist(color='g', label='daily_vaccinations_per_million')
+        plt.hist(country_1, label='Norway')
+        plt.hist(country_2, label='Peru')
+        plt.legend(loc='upper right')
+        plt.xlabel('daily_vaccinations_per_million')
+        plt.ylabel('frequency')
         plt.show()
         return None
 
