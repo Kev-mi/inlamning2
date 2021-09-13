@@ -23,7 +23,7 @@ class DataHandler:
             None
         '''
 
-        country_2.plot.hist()
+        country_2.plot.hist(label='daily_vaccinations_per_million')
         print(country_1)
         print(country_2)
         plt.show()
