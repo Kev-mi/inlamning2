@@ -15,7 +15,7 @@ class DataHandler:
         self.plotting_goal = plotting_goal
         self.url = 'https://github.com/NordAxon/ec-python-course/blob/master/assignments/01_inlamningsuppgift_2_data.csv?raw=true'
 
-    def plot_vaccinations(self, country_1: pd.DataFrame, country_2: pd.DataFrame) -> None:
+    def plot_vaccinations(self, country_1: pd.DataFrame, country_2: pd.DataFrame,country_1_name, country_2_name, selected_data) -> None:
         '''Function that plots using the df arguments
         Args:
             country_1(pd.DataFrame): selected country
@@ -25,10 +25,10 @@ class DataHandler:
         '''
 
         #country_1.plot.hist(color='g', label='daily_vaccinations_per_million')
-        plt.hist(country_1, label='Norway')
-        plt.hist(country_2, label='Peru')
+        plt.hist(country_1, label=str(country_1_name))
+        plt.hist(country_2, label=str(country_2_name))
         plt.legend(loc='upper right')
-        plt.xlabel('daily_vaccinations_per_million')
+        plt.xlabel(str(selected_data))
         plt.ylabel('frequency')
         plt.show()
         return None
@@ -56,7 +56,7 @@ class DataHandler:
 def main():
     country_plotting = DataHandler('vaccine_data_plotting')
     country_1_Df, country_2_Df = country_plotting._extract_country_data(--country1, --country2, --data-flag)
-    country_plotting.plot_vaccinations(country_1_Df, country_2_Df)
+    country_plotting.plot_vaccinations(country_1_Df, country_2_Df,--country1, --country2, --data-flag)
 
 
 if __name__ == "__main__":
