@@ -24,7 +24,6 @@ class DataHandler:
             None
         '''
 
-        #country_1.plot.hist(color='g', label='daily_vaccinations_per_million')
         plt.hist(country_1, label=str(country_1_name))
         plt.hist(country_2, label=str(country_2_name))
         plt.legend(loc='upper right')
