@@ -23,7 +23,7 @@ class DataHandler:
             None
         '''
 
-        country_2.plot()
+        country_2.plot.hist()
         print(country_1)
         print(country_2)
         plt.show()
