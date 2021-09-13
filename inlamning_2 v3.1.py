@@ -23,9 +23,8 @@ class DataHandler:
             None
         '''
 
-        country_2.plot.hist(label='daily_vaccinations_per_million')
-        print(country_1)
-        print(country_2)
+        country_1.plot.hist(color='g', label='daily_vaccinations_per_million')
+        country_2.plot.hist(color='b', label='daily_vaccinations_per_million2')
         plt.show()
         return None
 
