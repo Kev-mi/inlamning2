@@ -15,7 +15,7 @@ class DataHandler:
         self.plotting_goal = plotting_goal
         self.url = 'https://github.com/NordAxon/ec-python-course/blob/master/assignments/01_inlamningsuppgift_2_data.csv?raw=true'
 
-    def plot_vaccinations(self, country_1: pd.DataFrame, country_2: pd.DataFrame,country_1_name, country_2_name, selected_data) -> None:
+    def plot_vaccinations(self, country_1: pd.DataFrame, country_2: pd.DataFrame,country_1_name : str, country_2_name : str, selected_data : str) -> None:
         '''Function that plots using the df arguments
         Args:
             country_1(pd.DataFrame): selected country
