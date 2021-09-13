@@ -20,6 +20,9 @@ class DataHandler:
         Args:
             country_1(pd.DataFrame): selected country
             country_2(pd.DataFrame): other selected country
+            country_1_name(str): name of selected country
+            country_2_name(str): name of other selected country
+            selected_data(str): what data the user wants to view                                    
         returns:
             None
         '''
