@@ -30,7 +30,9 @@ class DataHandler:
         plt.hist(country_1, label=str(country_1_name))
         plt.hist(country_2, label=str(country_2_name))
         plt.legend(loc='upper right')
-        plt.xlabel(str(selected_data))
+        x_label = str(selected_data)
+        x_label = x_label.replace("_"," ")
+        plt.xlabel(x_label)
         plt.ylabel('frequency')
         plt.show()
         return None
