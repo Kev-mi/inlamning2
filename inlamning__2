@@ -7,7 +7,7 @@ class DataHandler:
     def __init__(self, plotting_goal: str) -> None:
         ''' Inititialiser that stores the url to use
         Args:
-            plotting_goal(str) just a name to make it work
+            plotting_goal(str): name
         Returns:
             None
         '''
