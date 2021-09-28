@@ -55,4 +55,7 @@ class DataHandler:
         country_2_Df = (country_2[[selected_stat]])
         return country_1_Df, country_2_Df
 
-
+def main(data_flag, country1, country2):
+    country_plotting = DataHandler('vaccine_data_plotting')
+    country_1_Df, country_2_Df = country_plotting._extract_country_data(country1, country2, data_flag)
+    country_plotting.plot_vaccinations(country_1_Df, country_2_Df,country1, country2, data_flag)
