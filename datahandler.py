@@ -46,7 +46,7 @@ class DataHandler:
             country_1_Df(pd.DataFrame):
             country_2_Df(pd.DataFrame):
         '''
-        country_1_Df, country_2_Df = country_plotting.self_extract_country_data(country1, country2, data_flag)
+        country_1_Df, country_2_Df = country_plotting.self_extract_country_data(selected_country_1, selected_country_2, selected_stat)
         return country_1_Df, country_2_Df
 
 
