@@ -35,6 +35,20 @@ class DataHandler:
         plt.ylabel('frequency')
         plt.show()
         return None
+    def country_data_caller(self, selected_country_1: str, selected_country_2: str,
+                              selected_stat: str) -> pd.DataFrame:
+        '''
+        Args:
+            selected_country_1(str): string that selected what country the user wants stat from
+            selected_country_2(str): string that selected what country the user wants stat from
+            selected_stat(str): string that selects what stat the user selected to view
+        return:
+            country_1_Df(pd.DataFrame):
+            country_2_Df(pd.DataFrame):
+        '''
+        country_1_Df, country_2_Df = country_plotting.self_extract_country_data(country1, country2, data_flag)
+        return country_1_Df, country_2_Df
+
 
     def _extract_country_data(self, selected_country_1: str, selected_country_2: str,
                               selected_stat: str) -> pd.DataFrame:
@@ -57,5 +71,5 @@ class DataHandler:
 
 def main(data_flag, country1, country2):
     country_plotting = DataHandler('vaccine_data_plotting')
-    country_1_Df, country_2_Df = country_plotting._extract_country_data(country1, country2, data_flag)
+    country_1_Df, country_2_Df = country_plotting.country_data_caller(country1, country2, data_flag)
     country_plotting.plot_vaccinations(country_1_Df, country_2_Df,country1, country2, data_flag)
