@@ -8,4 +8,4 @@ if __name__ == "__main__":
     parser.add_argument('--data_flag',help="enter what you want the program to do", required=True, type=str)
     args = parser.parse_args()
     args.country1, args.country2
-    main(args.data_flag, args.country1, args.country2)
+    datahandler.main(args.data_flag, args.country1, args.country2)
